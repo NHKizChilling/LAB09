@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 int entry_time();
+void process();
 int exit_time();
 int time_calc(int entry, int exit);
 int money_calc(int hours);
@@ -10,6 +11,12 @@ void output(int count, int sum_time, int sum_fee);
 int main()
 {
     system("cls");
+    process();
+    return 0;
+}
+
+void process()
+{
     int entry;
     int exit;
     int hours;
@@ -31,7 +38,6 @@ int main()
         sum_time += hours;
     } while ( n != 0 );
     output(count, sum_time, sum_fee);
-    return 0;
 }
 
 int entry_time()
