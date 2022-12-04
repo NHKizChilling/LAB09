@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 int input();
+void process();
 int actual_income(int total_income);
 void output1(int total_income, int actual__income);
 void _sum_income(int *sum_income, int actual_income);
@@ -10,6 +11,12 @@ void _sum_tax(int *sum_tax, int taxes);
 void output2(int *sum_income, int *sum_tax, int count);
 
 int main()
+{
+    process();
+    return 0;
+}
+
+void process()
 {
     int total_income;
     int actual__income;
@@ -33,7 +40,6 @@ int main()
         _sum_tax(sum_tax, taxes);
     } while ( n != 0 );
     output2(sum_income, sum_tax, count);
-    return 0;
 }
 
 int input()
